@@ -1,0 +1,165 @@
+:root {
+  --White: #fff;
+  --Platinum: #e8ebe4;
+  --Gray: #bec1bb;
+  --BlueBell: #a491d2;
+  --Soap: #cdc3e6;
+  --PaleLavender: #d4dcff;
+  --DarkJungle: #1b1f21;
+  --OuterSpace: #444749;
+  --OldSilver: #828485;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 42px;
+  color: var(--DarkJungle);
+  margin: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  line-height: 2rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 24px;
+  color: var(--DarkJungle);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-size: 24px;
+  color: var(--OuterSpace);
+}
+
+span {
+  font-size: 16px;
+  color: #bec1bb;
+}
+
+button {
+  background-color: var(--BlueBell);
+  color: var(--White);
+  border: none;
+  padding: 20px 80px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: var(--Soap);
+}
+button:focus {
+  background-color: var(--OldSilver);
+}
+
+strong {
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+section.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid var(--Gray);
+  flex: 6;
+}
+
+section.lista-usuarios {
+  flex: 2;
+  overflow-y: scroll;
+}
+.usuario {
+  display: flex;
+  align-items: center;
+}
+
+section.home img {
+  width: 350px;
+  height: auto;
+}
+.avatar img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 1px solid var(--Gray);
+}
+
+.usuario-activo {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #bec1bb;
+  padding: 20px;
+}
+
+.usuario-activo:last-child {
+  border-bottom: none;
+}
+
+.accion {
+  display: flex;
+  align-items: center;
+}
+
+span.material-icons {
+  padding: 10px;
+  color: var(--OldSilver);
+}
+
+.nuevo-chat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  border-bottom: 1px solid var(--Gray);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  section.home {
+    border-left: none;
+
+  }
+  section.home img {
+    width: 50%;
+  }
+  section.lista-usuarios {
+    flex: 1;
+    order: 1;
+  }
+
+  section.home {
+    flex: 6;
+    display: none;
+  }
+  
+  section.lista-usuarios {
+    flex: 4;
+  }
+}
